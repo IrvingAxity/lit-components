@@ -72,7 +72,7 @@ export class LoginForm extends LitElement {
     }
 
     button:hover {
-      background-color: #900C3F;
+      background-color: #900c3f;
     }
 
     .error-message {
@@ -113,8 +113,8 @@ export class LoginForm extends LitElement {
     const password = (form.querySelector('#password') as HTMLInputElement).value.trim();
 
     if (username === 'irving@gmail.com' && password === 'axity') {
-      alert('Inicio de sesión exitoso');
       this.error = false;
+      this.dispatchEvent(new CustomEvent('login-success', { bubbles: true, composed: true }));
     } else {
       this.error = true;
     }
