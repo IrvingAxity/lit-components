@@ -59,4 +59,16 @@ describe("My Primera prueba", () => {
     expect(element).to.be.instanceOf(MyTester);
     expect(element).shadowDom.equal("<p>Hola, Mundo Testing!</p>");
   });
+
+describe('FizzBuzz Test', () => {
+  it('Entre 3 fizz, entre 5 buzz, entre los 2 feezbuzz', () => {
+    const expected = [
+      '1','2','Fizz','4', 'Buzz','Fizz','7','8','Fizz','Buzz','11','Fizz','13','14','FizzBuzz'
+    ];
+
+    const result = Utils.fizzBuzz(15);
+
+     expect(result).to.deep.equal(expected);
+  });
+});
 });
